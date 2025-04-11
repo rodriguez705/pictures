@@ -1,14 +1,16 @@
-import SearchBar from "./components/SearchBar"
-import ImageList from "./components/ImageList"
-
 function App() {
-  const [count, setCount] = useState(0)
+  //searchImages('cars')
+  const [images, setImages] = useState ([])
 
+  const handleSubmit  = async (term) => {
+    console.log ('Ustedesta buscando cars ', term)
+    const result = await searchImages (term)
+  }
   return (
     <>
-      <h1>Pictures Apps</h1>
-      <SearchBar/>
-      <imageList/>
+      <h1>Pictures App</h1>
+      <SearchBar onSubmit={handleSubmit} />
+      <ImageList images={images}/>
     </>
   )
 }
