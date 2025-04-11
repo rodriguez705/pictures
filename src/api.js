@@ -4,7 +4,7 @@ const searchImages = async(term)=>{
     const url='https://api.unsplash.com/search/photos/?client_id=TnElhmZcqccyQynBiQ-RkDN6gDCeYlVb6gzV7oRllb0'
     const response =await axios.get(url, {
         params:{
-            query:'cars'
+            query: term
         }
     })
     console.log(response)
