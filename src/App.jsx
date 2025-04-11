@@ -1,5 +1,5 @@
 import SearchBar from "./components/SearchBar"
-import imageList from "./components/imageList"
+import imageList from "./components/ImageList"
 
 function App() {
   const [count, setCount] = useState(0)
